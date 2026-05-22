@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: tierhandlung
+  datasource:
+    # H2 keeps the example self-contained. Data lives only while the application is running.
+    url: jdbc:h2:mem:tierhandlung
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
