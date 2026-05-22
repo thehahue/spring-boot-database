@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="270" viewBox="0 0 760 270" role="img" aria-labelledby="title desc">
+  <title id="title">ER-Diagramm Tierhandlung</title>
+  <desc id="desc">Eine Kategorie hat viele Tiere. Jedes Tier verweist ueber category_id auf eine Kategorie.</desc>
+  <defs>
+    <style>
+      .box { fill: #ffffff; stroke: #243447; stroke-width: 2; }
+      .header { fill: #d9eef2; stroke: #243447; stroke-width: 2; }
+      .relation { fill: none; stroke: #243447; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+      .name { fill: #18212b; font: 700 21px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .field { fill: #18212b; font: 17px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .key { fill: #3c6274; font: 700 15px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .label { fill: #3c6274; font: 16px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="760" height="270" rx="8" fill="#f6f8fa" />
+
+  <rect class="box" x="36" y="42" width="255" height="184" rx="7" />
+  <path class="header" d="M43 42h241a7 7 0 0 1 7 7v39H36V49a7 7 0 0 1 7-7z" />
+  <text class="name" x="58" y="72">pet_categories</text>
+  <text class="key" x="58" y="121">PK</text>
+  <text class="field" x="98" y="121">id</text>
+  <text class="field" x="58" y="156">name</text>
+  <text class="field" x="58" y="191">description</text>
+
+  <rect class="box" x="469" y="24" width="255" height="222" rx="7" />
+  <path class="header" d="M476 24h241a7 7 0 0 1 7 7v39H469V31a7 7 0 0 1 7-7z" />
+  <text class="name" x="491" y="54">pets</text>
+  <text class="key" x="491" y="103">PK</text>
+  <text class="field" x="531" y="103">id</text>
+  <text class="field" x="491" y="134">name, species</text>
+  <text class="field" x="491" y="165">date_of_birth</text>
+  <text class="field" x="491" y="196">price, available</text>
+  <text class="key" x="491" y="227">FK</text>
+  <text class="field" x="531" y="227">category_id</text>
+
+  <path class="relation" d="M291 135H469" />
+  <path class="relation" d="M318 121v28" />
+  <path class="relation" d="M442 135l-24-16M442 135l-24 0M442 135l-24 16" />
+  <text class="label" x="320" y="111">1</text>
+  <text class="label" x="421" y="111">n</text>
+</svg>

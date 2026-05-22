@@ -92,6 +92,8 @@ die Hibernate-Einstellung `hibernate.format_sql=true`.
 Ein Tier gehoert zu genau einer Kategorie. Die Entitaet `Pet` bildet das mit
 einer `@ManyToOne`-Beziehung ab:
 
+![Kleines ER-Diagramm fuer Kategorie und Tier](docs/er-diagram.svg)
+
 ```java
 @ManyToOne(fetch = FetchType.EAGER, optional = false)
 @JoinColumn(name = "category_id", nullable = false)
