@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "pet_categories")
-public class PetCategory {
+public class PetCategory { //pet_category -> wenn nicht mit @Table definiert
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
