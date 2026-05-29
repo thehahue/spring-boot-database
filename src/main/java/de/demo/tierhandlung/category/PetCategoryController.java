@@ -2,6 +2,7 @@ package de.demo.tierhandlung.category;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/categories")
 public class PetCategoryController {
-
     private final PetCategoryRepository categoryRepository;
 
+    @Autowired
     public PetCategoryController(PetCategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
@@ -26,7 +27,7 @@ public class PetCategoryController {
                 .toList();
     }
 
-    public record CategoryResponse(Long id, String name, String description) {
+    public record CategoryResponse(Long id, String name, String beschreibung) {
     }
 }
 
